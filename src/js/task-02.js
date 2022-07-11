@@ -4,14 +4,18 @@ const ingredients = [
   'Garlic',
   'Tomatos',
   'Herbs',
-  'Condiments',
+  'Condiments'
 ];
 
-const ingredientsList = document.querySelector("ul")
+function createIngredient (content) {
+  const ingredientsElement = document.createElement("li")
+  ingredientsElement.classList.add("item")
+  ingredientsElement.textContent = content
+  return ingredientsElement
+}
 
-const ingredientsElementsArray = ingredients.map(elem => {
-  // const ingredientsElement = document.createElement("li")
-  // // ingredientsElement.classList.add(".item")
-  // ingredientsElement.textContent = `${elem}`
-})
+const ingredientsElementsArray = ingredients.map(elem => createIngredient(elem))
+
+const ingredientsList = document.querySelector("#ingredients")
+
 ingredientsList.append(...ingredientsElementsArray)
