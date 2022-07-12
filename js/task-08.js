@@ -18,6 +18,9 @@ loginButton.addEventListener("click", () => {
         password
     }
     
-    console.log(formData)
+        console.log(formData)
+        
+        form[0].value = ""
+        form[1].value = ""
 }}})
 
