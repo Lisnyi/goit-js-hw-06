@@ -12,7 +12,7 @@ let amount = 0
 inputField.addEventListener("change", (event) => amount = event.currentTarget.valueAsNumber)
 
 function createBoxes() {
-  const newElementsString = []
+  const newElementsArray = []
   for (let i = 0; i < amount; i++) {    
     const newElement = document.createElement("div")
     newElement.style.backgroundColor = `${getRandomHexColor()}`
@@ -23,10 +23,10 @@ function createBoxes() {
       newElement.style.width = `${(i+1)*10+boxesConteiner.lastElementChild.clientWidth}px`
       newElement.style.height = `${(i+1)*10+boxesConteiner.lastElementChild.clientHeight}px`
     }
-    newElementsString.push(newElement)
+    newElementsArray.push(newElement)
   }
   
-  boxesConteiner.append(...newElementsString)
+  boxesConteiner.append(...newElementsArray)
 }
 
 function destroyBoxes() {
