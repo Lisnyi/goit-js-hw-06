@@ -20,7 +20,6 @@ loginButton.addEventListener("click", () => {
     
         console.log(formData)
         
-        form[0].value = ""
-        form[1].value = ""
+        event.currentTarget.reset()
 }}})
 
